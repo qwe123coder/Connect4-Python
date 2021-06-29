@@ -42,13 +42,12 @@ def winning_move(board, piece):
 			if board[r][c] == piece and board[r+1][c] == piece and board[r+2][c] == piece and board[r+3][c] == piece:
 				return True
 
-	# Check positively sloped diaganols
+	
 	for c in range(COLUMN_COUNT-3):
 		for r in range(ROW_COUNT-3):
 			if board[r][c] == piece and board[r+1][c+1] == piece and board[r+2][c+2] == piece and board[r+3][c+3] == piece:
 				return True
 
-	# Check negatively sloped diaganols
 	for c in range(COLUMN_COUNT-3):
 		for r in range(3, ROW_COUNT):
 			if board[r][c] == piece and board[r-1][c+1] == piece and board[r-2][c+2] == piece and board[r-3][c+3] == piece:
@@ -108,8 +107,6 @@ while not game_over:
 
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
-			#print(event.pos)
-			# Ask for Player 1 Input
 			if turn == 0:
 				posx = event.pos[0]
 				col = int(math.floor(posx/SQUARESIZE))
@@ -124,7 +121,6 @@ while not game_over:
 						game_over = True
 
 
-			# # Ask for Player 2 Input
 			else:				
 				posx = event.pos[0]
 				col = int(math.floor(posx/SQUARESIZE))
