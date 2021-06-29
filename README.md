@@ -1,8 +1,8 @@
-#Connect4-Python
+# Connect4-Python
 
 thanks to this Video walkthrough on programming this game: https://youtu.be/UYgyRArKDEs
 
-#Run
+# Run
 ```
 pip install numpy
 pip install pygame
